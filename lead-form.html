@@ -6,46 +6,51 @@
                     * {
                     box-sizing: border-box;
                     }
+                    body{
+                        font-family : "AvenirNext-Regular", Helvetica, Arial, serif;
+                        background-color: white !important;
+                    }
                     
                     input[type=text], select, textarea {
                     width: 100%;
-                    padding: 12px;
-                    border: 1px solid #ccc;
+                    padding: 6px;
+                    border: 2px solid #ccc;
                     border-radius: 4px;
                     resize: vertical;
                     }
                     
                     input[type=email], select, textarea {
                     width: 100%;
-                    padding: 12px;
-                    border: 1px solid #ccc;
+                    padding: 6px;
+                    border: 2px solid #ccc;
                     border-radius: 4px;
                     resize: vertical;
                     }
                     
                     input[type=mobile], select, textarea {
                     width: 100%;
-                    padding: 12px;
-                    border: 1px solid #ccc;
+                    padding: 6px;
+                    border: 2px solid #ccc;
                     border-radius: 4px;
                     resize: vertical;
                     }
                     
                     input[type=date] {
                     width: 100%;
-                    padding: 12px;
-                    border: 1px solid #ccc;
+                    padding: 6px;
+                    border: 2px solid #ccc;
                     border-radius: 4px;
                     resize: vertical;
                     }
                     
                     label {
-                    padding: 12px 12px 12px 0;
+                    padding: 12px 12px 5px 0;
                     display: inline-block;
+                    margin-top: 8px;
                     }
                     
                     input[type=submit] {
-                    background-color: #4CAF50;
+                    background-color: red;
                     color: white;
                     padding: 12px 20px;
                     border: none;
@@ -55,12 +60,12 @@
                     }
                     
                     input[type=submit]:hover {
-                    background-color: #45a049;
+                    background-color: red;
                     }
                     
                     .container {
                     border-radius: 5px;
-                    background-color: #f2f2f2;
+                    background-color: white;
                     padding: 20px;
                     }
                     
@@ -68,7 +73,6 @@
                     float: left;
                     width: 25%;
                     margin-top: 6px;
-                    font-family : "AvenirNext-Regular", Helvetica, Arial, serif;
                     }
                     
                     .col-75 {
@@ -92,6 +96,47 @@
                     margin-top: 0;
                     }
                     }
+                    .label_Checkbox{
+                        margin-top: -39px;
+                        padding-left: 23px;
+                    }
+                    #gender      {
+                        background-color: white;
+                        color: #ccc;
+                    }
+                    #nationality{
+                        background-color: white;
+                        color: #ccc;
+                    }
+                    #existingCustomer{
+                        background-color: white;
+                        color: #ccc;
+                    }
+                    #married{
+                        background-color: white;
+                        color: #ccc; 
+                    }
+                    #hasChildren{
+                        background-color: white;
+                        color: #ccc; 
+                    }
+                    #priority{
+                        background-color: white;
+                        color: #ccc; 
+                    }
+                    #topic{
+                        background-color: white;
+                        color: #ccc; 
+                    }
+                    #dateOfBirth{
+                        background-color: white;
+                        color: #ccc; 
+                    }
+                    .star::after{
+                        content: "*";
+                        color: #ff0000;
+                    }
+
                 </style>
             </head>
             <body>
@@ -102,7 +147,7 @@
                         
                         <div class="row">
                             <div class="col-25">
-                                <label for="fname">First Name</label>
+                                <label class="star" for="fname">First Name</label>
                             </div>
                             <div class="col-75">
                                 <input type="text" id="fname" name="firstname" placeholder=""/>
@@ -111,16 +156,28 @@
                         
                         <div class="row">
                             <div class="col-25">
-                                <label for="lname">Last Name</label>
+                                <label class="star" for="lname">Last Name</label>
                             </div>
                             <div class="col-75">
                                 <input type="text" id="lname" name="lastname" placeholder=""/>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="star" for="gender">Gender</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="gender" name="genderOptions" >
+                                    <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Male</option>
+                                     <option value="No">Female</option>
+                                    </select>
+                            </div>
+                        </div>
                         
                         <div class="row">
                             <div class="col-25">
-                                <label for="email">Email</label>
+                                <label class="star" for="email">Email</label>
                             </div>
                             <div class="col-75">
                                 <input type="email" id="email" name="email" placeholder="" />
@@ -129,16 +186,39 @@
 						
                         <div class="row">
                             <div class="col-25">
-                                <label for="mobile">Mobile</label>
+                                <label class="star" for="mobile">Mobile</label>
                             </div>
                             <div class="col-75">
                                 <input type="mobile" id="mobile" name="mobile" placeholder=""/>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="star" for="dateOfBirth">Date of Birth</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder=""/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label class="star" for="nationality">Nationality</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="nationality" name="nationalityOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Singaporean/Singaporean PR</option>
+                                    <option value="No">European Union Resident</option>
+                                    <option value="No">Others</option>
+                                </select>
+                            </div>
+                        </div>
                         
                         <div class="row">
                             <div class="col-25">
-                                <label for="existingCustomer">Are you a Prudential Policy Owner?</label>
+                                <label class="star" for="existingCustomer">Are you a Prudential Policy Owner?</label>
                             </div>
                             <div class="col-75">
                                 <select id="existingCustomer" name="existingCustomerOptions" >
@@ -151,48 +231,13 @@
                         
                         <div class="row">
                             <div class="col-25">
-                                <label for="nric">NRIC</label>
+                                <label class="star" for="nric">NRIC</label>
                             </div>
                             <div class="col-75">
                                 <input type="text" id="nric" name="nric" placeholder=""/>
                             </div>
                         </div>
                         
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="gender">Gender</label>
-                            </div>
-                            <div class="col-75">
-                                <select id="gender" name="genderOptions" >
-                                <option disabled selected value="Yes">Select</option>
-                                    <option value="Yes">Male</option>
-                                    <option value="No">Female</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="dateOfBirth">Date of Birth</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder=""/>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="nationality">Nationality</label>
-                            </div>
-                            <div class="col-75">
-                                <select id="nationality" name="nationalityOptions" >
-                                <option disabled selected value="Yes">Select</option>
-                                    <option value="Yes">Singaporean/Singaporean PR</option>
-                                    <option value="No">European Union Resident</option>
-                                    <option value="No">Others</option>
-                                </select>
-                            </div>
-                        </div>
                         
                         <div class="row">
                             <div class="col-25">
@@ -298,24 +343,33 @@
                         
                         <div class="row">
                             <label for="contacted">How do you like to be contacted?</label>
-                            <div >
+                            <p>By indicating in the tick box</p>
+                            <div>
                                 <input type="Checkbox" id="consent" name="consent" placeholder=""/>
-                                <label for="contacted">By indicating in the tick box,</label>
                             </div>
-                            <p>
-                                I consent to Prudential Assurance Company Singapore (Pte) Limited and its related corporations, respective representatives, agents, third party service providers, contractors and/or appointed distribution/business partners (collectively referred to as “Prudential”) using, sharing and/or processing my personal data for the purpose of contacting me about products and services distributed, marketed and/or introduced by Prudential through marketing, advertising and promotional material through SMS / MMS / Instant Message; Phone Call; Email;  and Social Media and perusing my contact details which Prudential has in its records from time to time.
-                            </p>
-                            <p>
-                                I hereby expressly understand and agree that my given consent(s) herein below do not supersede or replace any other consents and/or previous consents which I may have previously given to Prudential in respect of my personal data and is without prejudice to any legal rights available to Prudential to collect, use or disclose my personal data. 
-                            </p>
-                            <p>
+                            <div class="label_Checkbox">
+                            <label for="contacted">I consent to Prudential Assurance Company Singapore (Pte) Limited and its related corporations, respective representatives, agents, third party service providers, contractors and/or appointed distribution/business partners (collectively referred to as “Prudential”) using, sharing and/or processing my personal data for the purpose of contacting me about products and services distributed, marketed and/or introduced by Prudential through marketing, advertising and promotional material through (a) SMS / MMS / Instant Message; (b) Phone Call; (c) Email;  and (d) Social Media and perusing my contact details which Prudential has in its records from time to time.
+                                </label>
+
+                                <ul>
+                                    <li>SMS / MMS / Instant Message</li>
+                                    <li>Phone Call</li>
+                                    <li>Email</li>
+                                    <li>Social Media Account</li>
+                                </ul>
+                                <p>
+                                    I hereby expressly understand and agree that my given consent(s) herein below do not supersede or replace any other consents and/or previous consents which I may have previously given to Prudential in respect of my personal data and is without prejudice to any legal rights available to Prudential to collect, use or disclose my personal data. 
+                                </p>
+                            </div>
+                            
+                            <!-- <p>
                                 For existing customer<br/>
                                 I understand that I can refer to Prudential Data Privacy, which is available at https://www.prudential.com.sg/Privacy-Notice for more information on contacting Prudential for Feedback, Access, Correction and Withdrawal of using my personal data.
                             </p>
                             <p>
                                 For Individual who is new to Prudential<br/>
                                 I understand that I will receive a notification through email or SMS on how I provide Feedback and Request to Access, Correction and Withdrawal of using my personal data.
-                            </p>
+                            </p> -->
                         </div>
                         
                         <div class="row">
