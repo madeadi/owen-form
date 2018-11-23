@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <style>
+                    * {
+                    box-sizing: border-box;
+                    }
+                    
+                    input[type=text], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;
+                    }
+                    
+                    input[type=email], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;
+                    }
+                    
+                    input[type=mobile], select, textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;
+                    }
+                    
+                    input[type=date] {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;
+                    }
+                    
+                    label {
+                    padding: 12px 12px 12px 0;
+                    display: inline-block;
+                    }
+                    
+                    input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: right;
+                    }
+                    
+                    input[type=submit]:hover {
+                    background-color: #45a049;
+                    }
+                    
+                    .container {
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                    }
+                    
+                    .col-25 {
+                    float: left;
+                    width: 25%;
+                    margin-top: 6px;
+                    font-family : "AvenirNext-Regular", Helvetica, Arial, serif;
+                    }
+                    
+                    .col-75 {
+                    float: left;
+                    width: 75%;
+                    margin-top: 6px;
+                    
+                    }
+                    
+                    /* Clear floats after the columns */
+                    .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                    }
+                    
+                    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                    @media screen and (max-width: 600px) {
+                    .col-25, .col-75, input[type=submit] {
+                    width: 100%;
+                    margin-top: 0;
+                    }
+                    }
+                </style>
+            </head>
+            <body>
+                <h2></h2>
+                <p></p>
+                <div class="container">
+                    <form action="/action_page.php">
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname" name="firstname" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Last Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname" name="lastname" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="email" name="email" placeholder="" />
+                            </div>
+                        </div>
+						
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="mobile">Mobile</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="mobile" id="mobile" name="mobile" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="existingCustomer">Are you a Prudential Policy Owner?</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="existingCustomer" name="existingCustomerOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="nric">NRIC</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="nric" name="nric" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="gender">Gender</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="gender" name="genderOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Male</option>
+                                    <option value="No">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="dateOfBirth">Date of Birth</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="nationality">Nationality</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="nationality" name="nationalityOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Singaporean/Singaporean PR</option>
+                                    <option value="No">European Union Resident</option>
+                                    <option value="No">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="nationality">Preferred Language</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="nationality" name="nationalityOptions" >
+                                    <!--option disabled selected value="Yes">Select</option-->
+                                    <option value="Yes">English</option>
+                                    <option value="No">Mandarin</option>
+                                    <option value="No">Malay</option>
+                                    <option value="No">Tamil</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="married">Are you married?</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="married" name="marriedOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="hasChildren">Do you have children?</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="hasChildren" name="hasChildrenOptions" >
+                                <option disabled selected value="Yes">Select</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="priority">What are your top priorities in life?</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="priority" name="priorityOptions" >
+                                <option disabled selected value="Yes">Tick all that is relevant</option>
+                                    <option value="Save for daily necessities">Save for daily necessities</option>
+                                    <option value="Grow my wealth"> Grow my wealth</option>
+                                    <option value="Stay healthy and achieve overall wellness">Stay healthy and achieve overall wellness</option>
+                                    <option value="Retire well">Retire well</option>
+                                    <option value="Care for children's needs">Care for children's needs</option>
+                                    <option value="Care for aging parents' needs">	Care for aging parents' needs</option>
+                                    <option value="Travel">Travel</option>
+                                    <option value="Car">Car</option>
+                                    <option value="Property">Property</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="otherTopPriority">Other, please specify</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="otherTopPriority" name="otherTopPriority" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="topic">What topics appeal to you?</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="topic" name="topicOptions" >
+                                <option disabled selected value="Yes">Tick all that is relevant</option>
+                                    <option value="Family">Family</option>
+                                    <option value="Parenting">Parenting</option>
+                                    <option value="Stay healthy and achieve overall wellness">Stay healthy and achieve overall wellness</option>
+                                    <option value="Retire well">Retire well</option>
+                                    <option value="Relationships">Relationships</option>
+                                    <option value="Personal Finance">Personal Finance</option>
+                                    <option value="Career">Career</option>
+                                    <option value="Arts & Culture">Arts & Culture</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Food & Cuisine">Food & Cuisine</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="otherTopPriority">Other, please specify</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="otherTopPriority" name="otherTopPriority" placeholder=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <label for="contacted">How do you like to be contacted?</label>
+                            <div >
+                                <input type="Checkbox" id="consent" name="consent" placeholder=""/>
+                                <label for="contacted">By indicating in the tick box,</label>
+                            </div>
+                            <p>
+                                I consent to Prudential Assurance Company Singapore (Pte) Limited and its related corporations, respective representatives, agents, third party service providers, contractors and/or appointed distribution/business partners (collectively referred to as “Prudential”) using, sharing and/or processing my personal data for the purpose of contacting me about products and services distributed, marketed and/or introduced by Prudential through marketing, advertising and promotional material through SMS / MMS / Instant Message; Phone Call; Email;  and Social Media and perusing my contact details which Prudential has in its records from time to time.
+                            </p>
+                            <p>
+                                I hereby expressly understand and agree that my given consent(s) herein below do not supersede or replace any other consents and/or previous consents which I may have previously given to Prudential in respect of my personal data and is without prejudice to any legal rights available to Prudential to collect, use or disclose my personal data. 
+                            </p>
+                            <p>
+                                For existing customer<br/>
+                                I understand that I can refer to Prudential Data Privacy, which is available at https://www.prudential.com.sg/Privacy-Notice for more information on contacting Prudential for Feedback, Access, Correction and Withdrawal of using my personal data.
+                            </p>
+                            <p>
+                                For Individual who is new to Prudential<br/>
+                                I understand that I will receive a notification through email or SMS on how I provide Feedback and Request to Access, Correction and Withdrawal of using my personal data.
+                            </p>
+                        </div>
+                        
+                        <div class="row">
+                            <input type="submit" value="Submit"/>
+                        </div>
+                    </form>
+                </div>
+                
+            </body>
+        </html>
